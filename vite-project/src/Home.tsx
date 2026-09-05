@@ -1,8 +1,12 @@
-function Home() {
+type HomeProps = {
+  onPlay: () => void;
+};
+
+function Home({ onPlay }: HomeProps) {
   return (
     <div className="Home">
       <h1>Guess.fm</h1>
-      <button>Play</button>
+      <button onClick={onPlay}>Play</button>
     </div>
   );
 }
